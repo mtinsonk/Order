@@ -6,3 +6,4 @@ variable "subnet_id_2" {
  type = string
  default = "subnet-your_second_subnet_id"
 }
+#
