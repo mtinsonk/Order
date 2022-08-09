@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pkadmin
+  labels:
+    app: pkadmin
+spec:
+  replicas:
+  selector:
+    matchLabels:
+      app: pkadmin
+  template:
+    metadata:
+      labels:
+        app: pkadmin
+    spec:
+      containers:
+      - name: pkadmin
+        image: mtk/pkadmin
+        ports:
+        - containerPort: 80
+        env:
+        - name: PKADMIN DEFAULT_PASSWORD 
+          value: mtklesson.pem
+        - name: PKADMIN  DEFAULT EMAIL
+          value: mtinsonk@gmail.com
