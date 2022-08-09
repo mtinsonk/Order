@@ -3,7 +3,7 @@ version: '3.7'
 
 services:
   aws:
-    image: mtk/aws
+    image: mtinsonk/jenkins-mtkproject2
     volumes:
       - .:/code
       - aws-creds:/root/.aws
